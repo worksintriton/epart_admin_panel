@@ -1,0 +1,180 @@
+<div class="mt-1">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a [routerLink]="['/admin']" routerLinkActive="router-link-active" >Admin</a></li>
+          <li class="breadcrumb-item"><a [routerLink]="['/admin/Intermedaitor']" routerLinkActive="router-link-active">Intermedaitor</a></li>
+          <li *ngIf="addmode" class="breadcrumb-item active" aria-current="page">ADD</li>
+          <li *ngIf="editmode" class="breadcrumb-item active" aria-current="page">EDIT</li>
+        </ol>
+    </nav>
+  </div>
+  
+  <div class="mt-1 d-flex justify-content-end">
+    <button type="button" class="btn btn-dark btn-sm mr-1" data-toggle="modal" data-target="#addIntermedaitor">New</button>
+    <button type="button" class="btn btn-info btn-sm mr-1" (click)="editIntermedaitor()">Edit</button>
+    <button type="button" class="btn btn-danger btn-sm mr-1" (click)="Validate()">Delete</button>
+  </div>
+  
+  <div>
+    <h3>Intermedaitor List</h3>
+  </div>
+  
+  <div class="mt-1">
+    <ag-grid-angular
+    #agGrid
+        style="width: auto; height: 750px;"
+        class="ag-theme-alpine"
+        [rowHeight]="'50'"
+        [rowData]="Intermedaitor"
+        [columnDefs]="IntermedaitorcolumnDefs"
+        [pagination]="true">
+    </ag-grid-angular>
+  </div>
+
+  
+  <div class="modal fade" id="addIntermedaitor" tabindex="-1" aria-labelledby="addIntermedaitorLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addIntermedaitorLabel">New Intermedaitor Form</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="mt-1">
+                <form [formGroup]="IntermedaitorForm">
+                  <div class="container-fluid mt-3 mb-3">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="row">
+                                
+                            
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">First Name</label>
+                                <input type="text" class="form-control" placeholder="Enter The First Name" formControlName="sh_city">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Enter The Last Name" formControlName="sh_city">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">Email Address</label>
+                                <input type="text" class="form-control" placeholder="Enter The Email Address" formControlName="sh_city">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">UserName</label>
+                                <input type="text" class="form-control" placeholder="Enter The Email Address" formControlName="sh_city">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">Password</label>
+                                <input type="text" class="form-control" placeholder="Enter The password" formControlName="sh_city">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">RE-Enter Password</label>
+                                <input type="text" class="form-control" placeholder="Enter The Password" formControlName="sh_city">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlSelect1">Role</label>
+                                <select class="form-control" formControlName="sh_country">
+                                    <option value="">Select Role</option>
+                                    <option value="1">Country 1</option>
+                                    <option value="2">Country 2</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">Phone Number</label>
+                                <input type="text" class="form-control" placeholder="Enter Phone Number" formControlName="b_phonenumber">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">Mobile Number</label>
+                                <input type="text" class="form-control" placeholder="Enter Moblie Number" formControlName="b_countrycode">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">EST</label>
+                                <input type="text" class="form-control" placeholder="" formControlName="sh_address1">
+                            </div>
+                            
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlSelect1">Status</label>
+                                <select class="form-control" formControlName="sh_country">
+                                    <option value="">Select Status</option>
+                                    <option value="1">Country 1</option>
+                                    <option value="2">Country 2</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group col-12">
+                                <label for="exampleFormControlSelect1">Image</label>
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">Upload Image</label>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlSelect1">Country</label>
+                                <select class="form-control" formControlName="sh_country">
+                                    <option value="">Select Country</option>
+                                    <option value="1">Country 1</option>
+                                    <option value="2">Country 2</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">Language Spoken</label>
+                                <input type="text" class="form-control" placeholder="Enter The Language Spoken" formControlName="sh_address2">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">Address</label>
+                                <input type="text" class="form-control" placeholder="Enter The Address" formControlName="sh_address2">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">Created Date & Time</label>
+                                <input type="text" class="form-control" placeholder="Disable Field" formControlName="sh_address2">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">Modified Date & Time</label>
+                                <input type="text" class="form-control" placeholder="Disable Field" formControlName="sh_address2">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">Created By</label>
+                                <input type="text" class="form-control" placeholder="Disable Field" formControlName="sh_address2">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="exampleFormControlInput1">Modified By</label>
+                                <input type="text" class="form-control" placeholder="Disable Field" formControlName="sh_address2">
+                            </div>
+                            </div>
+                        </div>
+                  </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="d-flex justify-content-end">
+                <button *ngIf="addmode" type="button" class="btn btn-success btn-sm mr-1" (click)="addIntermedaitor()" data-dismiss="modal">Add</button>
+                <button *ngIf="editmode" type="button" class="btn btn-success btn-sm mr-1" (click)="updateIntermedaitor()" data-dismiss="modal">Update</button>
+                <button class="btn btn-warning btn-sm" (click)="cancel()" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="deleteIntermedaitor" tabindex="-1" aria-labelledby="deleteIntermedaitorLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteIntermedaitorLabel">Delete</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Do you really want to delete this Intermedaitor ?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-danger" (click)="deleteIntermedaitor()" data-dismiss="modal">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
