@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrManager } from 'ng6-toastr-notifications';
+import { AuthService } from '../auth/auth.service';
 
 
 @Component({
@@ -13,7 +14,10 @@ export class LoginComponent implements OnInit {
   
   LoginForm: FormGroup;
 
-  constructor(private formBuilder:FormBuilder, private router:Router, private toastr:ToastrManager) { 
+  constructor(private formBuilder:FormBuilder, 
+              private router:Router, 
+              private toastr:ToastrManager, 
+              private auth:AuthService) { 
     this.LoginForm = this.formBuilder.group({
       email:['',Validators.required],
       password:['',Validators.required]
@@ -25,13 +29,16 @@ export class LoginComponent implements OnInit {
 
   async login(){
     if (this.LoginForm.valid) {
-      
+      this.auth.login(this.LoginForm.value).subscribe(data=>{
+        if (data['success']) {
+          this.showSuccess(data['msg']);
+        } else {
+          this.showError(data['msg']);
+        }
+      });
     } else {
       this.showError('Please Fill Email and Passowrd');
     }
-  }
-  getonline(id,token) {
-  
   }
 
   showSuccess(msg) {
