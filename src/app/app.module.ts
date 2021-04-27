@@ -28,7 +28,10 @@ import { LandingComponent } from './landing/landing.component';
 import { NavigationComponent } from './user-pages/navigation/navigation.component';
 import { HomeComponent } from './user-pages/home/home.component';
 import { FooterComponent } from './user-pages/footer/footer.component';
-import { ProductListComponent } from './user-pages/product-list/product-list.component';
+import { ContactComponent } from './user-pages/contact/contact.component';
+import { PricingComponent } from './user-pages/pricing/pricing.component';
+import { ForgotPasswordComponent } from './user-pages/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './user-pages/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { ProductListComponent } from './user-pages/product-list/product-list.com
     NavigationComponent,
     HomeComponent,
     FooterComponent,
-    ProductListComponent,
+    ContactComponent,
+    PricingComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent,
   ],
   imports: [
     BrowserModule,

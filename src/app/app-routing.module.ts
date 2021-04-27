@@ -11,17 +11,19 @@ import { LoginComponent } from './login/login.component';
 import { LandingComponent } from './landing/landing.component';
 import { NavigationComponent } from './user-pages/navigation/navigation.component';
 import { HomeComponent } from './user-pages/home/home.component';
-import { ProductListComponent } from './user-pages/product-list/product-list.component';
+import { ForgotPasswordComponent } from './user-pages/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './user-pages/reset-password/reset-password.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'navigation',pathMatch:'full'},
   {path:'navigation',component:NavigationComponent, children:[
     {path:'',redirectTo:'home',pathMatch:'full'},
     {path:'home',component:HomeComponent},
-    {path:'product-list',component:ProductListComponent},
   ]},
   {path:'home',component:LandingComponent},
   {path:'login',component:LoginComponent},
+  {path:'forgot-password',component:ForgotPasswordComponent},
+  {path:'reset-password',component:ResetPasswordComponent},
   {path:'admin',component:AdminComponent,children:[
     {path:'',redirectTo:'dashboard',pathMatch:'full'},
     {path:'dashboard', component:DashboardComponent},

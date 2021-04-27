@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         }
       });
     } else {
-      this.showError('Please Fill Email and Passowrd');
+      this.showError('Please Fill Email and Password');
     }
   }
 
