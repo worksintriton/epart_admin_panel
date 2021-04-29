@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var $:any;
 @Component({
   selector: 'app-addbuyer',
   templateUrl: './addbuyer.component.html',
@@ -37,5 +37,21 @@ export class AddbuyerComponent implements OnInit {
 
   addCity(){
 
+  }
+
+  edit(){
+
+  }
+
+  validate(){
+    $('.bd-delete-modal-sm').modal('show');
+  }
+
+  delete(){
+
+  }
+
+  cancel(){
+    $('.bd-delete-modal-sm').modal('hide');
   }
 }
