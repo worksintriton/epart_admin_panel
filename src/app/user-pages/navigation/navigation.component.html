@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md navbar-custom sticky-top justify-content-between">
+    <a class="navbar-brand ml-5" [routerLink]="['/navigation/home']" routerLinkActive="router-link-active" > <img src="../../../assets/HLogo.jpeg" width="auto" height="50" style="border-radius: 10px;" class="d-inline-block align-top" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mr-5">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/navigation/home']" routerLinkActive="router-link-active" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/navigation/contact']" routerLinkActive="router-link-active" >Buyer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/navigation/contact']" routerLinkActive="router-link-active" >Supplier</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/navigation/contact']" routerLinkActive="router-link-active" >Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/navigation/pricing']" routerLinkActive="router-link-active" >Our Pricing</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet>  </router-outlet>
+  <app-footer></app-footer>

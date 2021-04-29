@@ -21,12 +21,16 @@ import { AddreasonComponent } from './admin-modules/app-fetures/addreason/addrea
 import { AddroleComponent } from './admin-modules/app-fetures/addrole/addrole.component';
 import { AddstateComponent } from './admin-modules/app-fetures/addstate/addstate.component';
 import { AddbuyerComponent } from './user-modules/addbuyer/addbuyer.component';
+import { ContactComponent } from './user-pages/contact/contact.component';
+import { PricingComponent } from './user-pages/pricing/pricing.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'navigation',pathMatch:'full'},
   {path:'navigation',component:NavigationComponent, children:[
     {path:'',redirectTo:'home',pathMatch:'full'},
     {path:'home',component:HomeComponent},
+    {path:'contact',component:ContactComponent},
+    {path:'pricing',component:PricingComponent},
   ]},
   {path:'home',component:LandingComponent},
   {path:'login',component:LoginComponent},
