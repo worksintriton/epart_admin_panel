@@ -21,6 +21,9 @@ import { AddreasonComponent } from './admin-modules/app-fetures/addreason/addrea
 import { AddroleComponent } from './admin-modules/app-fetures/addrole/addrole.component';
 import { AddstateComponent } from './admin-modules/app-fetures/addstate/addstate.component';
 import { AddbuyerComponent } from './user-modules/addbuyer/addbuyer.component';
+import { AddsubscriptionPlanComponent } from './admin-modules/app-fetures/addsubscription-plan/addsubscription-plan.component';
+import { AddtradingTypeComponent } from './admin-modules/app-fetures/addtrading-type/addtrading-type.component';
+import { AdduserTypeComponent } from './admin-modules/app-fetures/adduser-type/adduser-type.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'navigation',pathMatch:'full'},
@@ -46,7 +49,10 @@ const routes: Routes = [
     {path:'product-type-management', component:AddproductTypeComponent},
     {path:'reason-management', component:AddreasonComponent},
     {path:'role-management', component:AddroleComponent},
-    {path:'state-management', component:AddstateComponent}
+    {path:'state-management', component:AddstateComponent},
+    {path:'subscription-plan-management', component:AddsubscriptionPlanComponent},
+    {path:'trading-type-management', component:AddtradingTypeComponent},
+    {path:'user-type-management', component:AdduserTypeComponent}
   ]}
 ];
 

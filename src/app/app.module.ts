@@ -44,6 +44,9 @@ import { AddstateComponent } from './admin-modules/app-fetures/addstate/addstate
 import { AddbuyerComponent } from './user-modules/addbuyer/addbuyer.component';
 import { AddsellerComponent } from './user-modules/addseller/addseller.component';
 import { AddintermediatorComponent } from './user-modules/addintermediator/addintermediator.component';
+import { AddsubscriptionPlanComponent } from './admin-modules/app-fetures/addsubscription-plan/addsubscription-plan.component';
+import { AddtradingTypeComponent } from './admin-modules/app-fetures/addtrading-type/addtrading-type.component';
+import { AdduserTypeComponent } from './admin-modules/app-fetures/adduser-type/adduser-type.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +79,9 @@ import { AddintermediatorComponent } from './user-modules/addintermediator/addin
     AddbuyerComponent,
     AddsellerComponent,
     AddintermediatorComponent,
+    AddsubscriptionPlanComponent,
+    AddtradingTypeComponent,
+    AdduserTypeComponent,
   ],
   imports: [
     BrowserModule,
