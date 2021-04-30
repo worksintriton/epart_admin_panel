@@ -24,12 +24,16 @@ import { AddbuyerComponent } from './user-modules/addbuyer/addbuyer.component';
 import { AddsubscriptionPlanComponent } from './admin-modules/app-fetures/addsubscription-plan/addsubscription-plan.component';
 import { AddtradingTypeComponent } from './admin-modules/app-fetures/addtrading-type/addtrading-type.component';
 import { AdduserTypeComponent } from './admin-modules/app-fetures/adduser-type/adduser-type.component';
+import { ContactComponent } from './user-pages/contact/contact.component';
+import { PricingComponent } from './user-pages/pricing/pricing.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'navigation',pathMatch:'full'},
   {path:'navigation',component:NavigationComponent, children:[
     {path:'',redirectTo:'home',pathMatch:'full'},
     {path:'home',component:HomeComponent},
+    {path:'contact',component:ContactComponent},
+    {path:'pricing',component:PricingComponent},
   ]},
   {path:'home',component:LandingComponent},
   {path:'login',component:LoginComponent},

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var $:any;
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -11,5 +11,9 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  goto(location){
+		$.scrollTo($(location), 1000);
+	}
 
 }
