@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminModuleService } from 'src/app/admin-module.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 declare var $:any;
 @Component({
   selector: 'app-addcity',
@@ -8,13 +8,18 @@ declare var $:any;
 })
 export class AddcityComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
-  cityList: any[];
-  dataLoaded: boolean;
+  addcityForm: FormGroup;
+  
   addmode: boolean;
   editmode: boolean;
-  deletemode: boolean;
   listmode: boolean;
-  constructor(private adminService:AdminModuleService) { }
+  dataLoaded: boolean;
+  deletemode: boolean;
+  constructor(private formBuilder:FormBuilder) { 
+    this.addcityForm = this.formBuilder.group({
+      id:['',Validators.required]
+    })
+  }
 
   ngOnInit(): void {
 
@@ -31,14 +36,9 @@ export class AddcityComponent implements OnInit {
       ordering:true,
       lengthMenu : [5, 10, 25, 50, 100]
     };
-
-    this.adminService.getCityList().subscribe(async data=>{
-      if (data['success']) {
-        this.cityList = data['data'];
-      } else {
-        this.cityList = [];
-      }
-    });
+    this.addmode = false;
+    this.editmode = false;
+    this.listmode = true;
   }
 
   getselected(event,i){
@@ -54,4 +54,20 @@ export class AddcityComponent implements OnInit {
 
   }
 
+  updateCity(){
+
+  }
+
+  deleteCity(){
+
+  }
+
+  cancel(){
+
+  }
+  
+  edit(){
+
+  }
+  
 }
