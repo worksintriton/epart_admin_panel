@@ -1,7 +1,19 @@
 <div class="container-fluid">
+    <div class="row d-flex justify-content-start">
+        <div class="col-12">
+            <h3>City Management</h3>
+        </div>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page" *ngIf="listmode">List</li>
+          <li class="breadcrumb-item active" aria-current="page" *ngIf="addmode">ADD</li>
+          <li class="breadcrumb-item active" aria-current="page" *ngIf="editmode">EDIT</li>
+        </ol>
+    </nav>
+</div>
 
-    <h1 class="h3 mb-2 text-gray-800">City Management</h1>
-
+<div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">City List</h6>
@@ -38,7 +50,7 @@
                         </tr>
                     </tfoot>
                     <tbody style="font-size: 14px;">
-                        <tr *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11]; let i = index;">
+                        <tr *ngFor="let item of cityList; let i = index;">
                             <td><input type="checkbox" (click)="getselected($event, i+1)" style="height:15px; width:15px;"></td>
                             <td>{{i+1}}</td>
                             <td>GCODE00{{i+1}}</td>

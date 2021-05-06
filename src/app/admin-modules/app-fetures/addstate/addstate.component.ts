@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminModuleService } from 'src/app/admin-module.service';
 
 @Component({
   selector: 'app-addstate',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddstateComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
-  constructor() { }
+  stateList: any;
+  constructor(private adminService:AdminModuleService) { }
 
   ngOnInit(): void {
     this.dtOptions = {
@@ -17,6 +19,13 @@ export class AddstateComponent implements OnInit {
       ordering:true,
       lengthMenu : [5, 10, 25, 50, 100]
     };
+    this.adminService.getStateList().subscribe(async data=>{
+      if (data['success']) {
+        this.stateList = data['data'];
+      } else {
+        this.stateList = [];
+      }
+    })
   }
   getselected(event,i){
     console.log(i); 
