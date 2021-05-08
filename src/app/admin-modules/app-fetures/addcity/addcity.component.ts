@@ -15,12 +15,12 @@ export class AddcityComponent implements OnInit {
   dataLoaded: boolean;
   addmode: boolean;
   editmode: boolean;
-  deletemode: boolean;
   listmode: boolean;
   selectedData_ID: any;
   addCityForm: FormGroup;
   countryList: any;
   stateList: any[];
+  deletemode: boolean;
   constructor(private adminService:AdminModuleService, 
               private toastr:ToastrManager, 
               private formBuilder:FormBuilder) {

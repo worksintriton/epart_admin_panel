@@ -1,24 +1,9 @@
 
-<div class="container-fluid">
-    <!-- <div class="row d-flex justify-content-start">
-        <div class="col-12">
-            <h3>Country Management</h3>
-        </div>
-    </div> -->
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item active" aria-current="page" *ngIf="listmode">LIST</li>
-          <li class="breadcrumb-item active" aria-current="page" *ngIf="addmode">ADD</li>
-          <li class="breadcrumb-item active" aria-current="page" *ngIf="editmode">EDIT</li>
-          <li class="breadcrumb-item active" aria-current="page" *ngIf="deletemode">DELETE</li>
-        </ol>
-    </nav>
-</div>
-<div class="container-fluid">
-    <div class="row d-flex justify-content-end">
-        <button class="btn btn-sm btn-dark mr-3 mb-1" (click)="addCity()" *ngIf="addmode" style="font-size: 12px;"  data-toggle="modal" data-target=".addCountry"> <i class="fas fa-plus"></i> Add</button>
-    </div>
+    <h1 class="h3 mb-2 text-dark">Country Management</h1>
 
+    <div class="mt-1 d-flex justify-content-end">
+        <button type="button" class="btn btn-dark btn-sm mr-1 mb-1" data-toggle="modal" data-target="#addCity" style="font-size: 10px;"><i class="fas fa-plus"></i> ADD</button>
+      </div>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-dark">Country List</h6>
@@ -53,7 +38,9 @@
                         <tr>
                             <th style="position: sticky; left:0;"><input type="checkbox" (click)="getallselected($event)" style="height:15px; width:15px;"></th>
                             <th>S.No</th>
+                            <th>Generated Code</th>
                             <th>Country Name</th>
+                            <th>Delete Status</th>
                             <th>Created At</th>
                             <th>Created By</th>
                             <th>Updated At</th>
@@ -65,11 +52,11 @@
                         <tr *ngFor="let item of countryList; let i = index;">
                             <td style="position: sticky; left:0; background-color:rgb(109, 109, 109)"><input type="checkbox" (click)="getselected($event, i+1)" style="height:15px; width:15px;"></td>
                             <td>{{i+1}}</td>
-                            <td>{{item.country_name}}</td>
-                            <td>{{item.created_at | date}}</td>
-                            <td>{{item.created_by}}</td>
-                            <td>{{item.modified_at | date}}</td>
-                            <td>{{item.modified_by}}</td>
+                            <td>GCODE00{{i+1}}</td>
+                            <td>COUNTRY00{{i+1}}</td>
+                            <td>Enabled</td>
+                            <td>28/08/2021</td>
+                            <td>29/08/2021</td>
                             <td>
                                 <button class="btn btn-sm btn-dark mr-1" style="font-size: 10px;" (click)="editCountry(item)"> <i class="far fa-edit"></i> </button>
                                 <button class="btn btn-sm btn-danger mr-1" style="font-size: 10px;" (click)="validate(item.id)"> <i class="fas fa-trash-alt"></i> </button>
