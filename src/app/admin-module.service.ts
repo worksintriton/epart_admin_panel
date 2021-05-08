@@ -21,15 +21,15 @@ export class AdminModuleService {
   }
 
   createCity(data){
-    return this.http.post(environment.baseurl+'city-management/getlist',data);
+    return this.http.post(environment.baseurl+'city-management/create',data);
   }
 
   updateCity(data){
-    return this.http.put(environment.baseurl+'city-management/getlist/'+data.id,data)
+    return this.http.put(environment.baseurl+'city-management/update/'+data.id,data)
   }
 
   deleteCity(id){
-    return this.http.delete(environment.baseurl+'city-management/getlist/'+id);
+    return this.http.delete(environment.baseurl+'city-management/delete/'+id);
   }
 
   searchCityList(data){
@@ -51,15 +51,15 @@ export class AdminModuleService {
   }
 
   createState(data){
-    return this.http.post(environment.baseurl+'state-management/getlist',data);
+    return this.http.post(environment.baseurl+'state-management/create',data);
   }
 
   updateState(data){
-    return this.http.put(environment.baseurl+'state-management/getlist/'+data.id,data)
+    return this.http.put(environment.baseurl+'state-management/update/'+data.id,data)
   }
 
   deleteState(id){
-    return this.http.delete(environment.baseurl+'state-management/getlist/'+id);
+    return this.http.delete(environment.baseurl+'state-management/delete/'+id);
   }
 
   searchStateList(data){
@@ -81,11 +81,11 @@ export class AdminModuleService {
   }
 
   createCountry(data){
-    return this.http.post(environment.baseurl+'country-management/getlist',data);
+    return this.http.post(environment.baseurl+'country-management/create',data);
   }
 
   updateCountry(data){
-    return this.http.put(environment.baseurl+'country-management/getlist/'+data.id,data)
+    return this.http.put(environment.baseurl+'country-management/update/'+data.id,data)
   }
 
   deleteCountry(id){
@@ -98,6 +98,124 @@ export class AdminModuleService {
 
 
  // Country MANAGEMENT API LIST ENDEDS HERE //
+
+
+ // Currency MANAGEMENT API LIST STARTS HERE //
+
+  getCurrencyList(){
+    return this.http.get(environment.baseurl+'currency-management/getlist')
+  }
+
+  getCurrencyInfo(id){
+    return this.http.get(environment.baseurl+'currency-management/getby_id/'+id);
+  }
+
+  createCurrency(data){
+    return this.http.post(environment.baseurl+'currency-management/create',data);
+  }
+
+  updateCurrency(data){
+    return this.http.put(environment.baseurl+'currency-management/update/'+data.id,data)
+  }
+
+  deleteCurrency(id){
+    return this.http.delete(environment.baseurl+'currency-management/delete/'+id);
+  }
+
+  searchCurrencyList(data){
+    return this.http.post(environment.baseurl+'currency-management/search',data)
+  }
+
+
+ // Currency MANAGEMENT API LIST ENDEDS HERE //
+
+ // PAYOUT SCHEDULE MANAGEMENT API LIST STARTS HERE //
+
+ getPayoutList(){
+  return this.http.get(environment.baseurl+'payout-management/getlist')
+}
+
+getPayoutInfo(id){
+  return this.http.get(environment.baseurl+'payout-management/getby_id/'+id);
+}
+
+createPayout(data){
+  return this.http.post(environment.baseurl+'payout-management/create',data);
+}
+
+updatePayout(data){
+  return this.http.put(environment.baseurl+'payout-management/update/'+data.id,data)
+}
+
+deletePayout(id){
+  return this.http.delete(environment.baseurl+'payout-management/delete/'+id);
+}
+
+searchPayoutList(data){
+  return this.http.post(environment.baseurl+'payout-management/search',data)
+}
+
+
+// PAYOUT SCHEDULE MANAGEMENT API LIST ENDEDS HERE //
+
+
+ // Product Type MANAGEMENT API LIST STARTS HERE //
+
+ getProductTypeList(){
+  return this.http.get(environment.baseurl+'productType-management/getlist')
+}
+
+getProductTypeInfo(id){
+  return this.http.get(environment.baseurl+'productType-management/getby_id/'+id);
+}
+
+createProductType(data){
+  return this.http.post(environment.baseurl+'productType-management/create',data);
+}
+
+updateProductType(data){
+  return this.http.put(environment.baseurl+'productType-management/update/'+data.id,data)
+}
+
+deleteProductType(id){
+  return this.http.delete(environment.baseurl+'productType-management/delete/'+id);
+}
+
+searchProductTypeList(data){
+  return this.http.post(environment.baseurl+'productType-management/search',data)
+}
+
+
+// Product Type MANAGEMENT API LIST ENDEDS HERE //
+
+ // Product Type MANAGEMENT API LIST STARTS HERE //
+
+ getReasonList(){
+  return this.http.get(environment.baseurl+'reason-management/getlist')
+}
+
+getReasonInfo(id){
+  return this.http.get(environment.baseurl+'reason-management/getby_id/'+id);
+}
+
+createReason(data){
+  return this.http.post(environment.baseurl+'reason-management/create',data);
+}
+
+updateReason(data){
+  return this.http.put(environment.baseurl+'reason-management/update/'+data.id,data)
+}
+
+deleteReason(id){
+  return this.http.delete(environment.baseurl+'reason-management/delete/'+id);
+}
+
+searchReasonList(data){
+  return this.http.post(environment.baseurl+'reason-management/search',data)
+}
+
+
+// Product Type MANAGEMENT API LIST ENDEDS HERE //
 
 }
 

@@ -57,6 +57,7 @@ export class AddcountryComponent implements OnInit {
       }
     });
   }
+
   getselected(event,i){
     console.log(i); 
   }
@@ -67,10 +68,10 @@ export class AddcountryComponent implements OnInit {
 
 
   addCountry(){
-    this.adminService.createCountry(this.addCountryForm.value).subscribe(async data=>{
+    this.adminService.createCountry(this.addCountryForm.value).subscribe(data=>{
       if (data['success']) {
         this.showSuccess(data['msg']);
-        this.onPageReload();
+        this.cancel();
       } else {
         this.showError(data['msg']);
       }
@@ -91,9 +92,24 @@ export class AddcountryComponent implements OnInit {
     }
   }
 
+  
+
   editCountry(data){
     if (data != null) {
-      
+      this.addCountryForm.patchValue({
+        id: data.id,
+        country_name: data.country_name,
+        created_at: data.created_at,
+        created_by: data.created_by,
+        modified_at: data.modified_at,
+        modified_by: data.modified_by,
+      });
+      $('.addCountry').modal('show');
+      this.selectedData_ID =  data.id;
+      this.addmode = false;
+      this.editmode = true;
+      this.deletemode = false;
+      this.listmode = false;
     } else {
       this.showWarning("Please Select a Record");
     }
@@ -114,11 +130,21 @@ export class AddcountryComponent implements OnInit {
   }
 
   updateCountry(){
-
+    this.dataLoaded = false;
+    this.adminService.updateCountry(this.addCountryForm.value).subscribe(data=>{
+      if (data['success']) {
+        this.showSuccess(data['msg']);
+        this.cancel();
+        this.selectedData_ID = null;
+      } else {
+        this.showSuccess(data['msg']);
+      }
+    });
   }
 
   cancel(){
     $('#deleteModal').modal('hide');
+    $('.addCountry').modal('hide');
     this.dataLoaded = false;
     this.addmode = true;
     this.editmode = false;
@@ -128,6 +154,13 @@ export class AddcountryComponent implements OnInit {
   }
 
   onPageReload(){
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 5,
+      processing: true,
+      ordering:true,
+      lengthMenu : [5, 10, 25, 50, 100]
+    };
     this.adminService.getCountryList().subscribe(async data=>{
       if (data['success']) {
         this.countryList = await data['data'];
