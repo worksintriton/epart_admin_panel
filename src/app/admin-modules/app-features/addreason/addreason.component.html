@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <!-- <div class="row d-flex justify-content-start">
         <div class="col-12">
-            <h3>Currency Management</h3>
+            <h3>Reason Management</h3>
         </div>
     </div> -->
     <nav aria-label="breadcrumb">
@@ -16,15 +16,12 @@
 </div>
 <div class="container-fluid">
     <div class="row d-flex justify-content-end">
-        <button class="btn btn-sm btn-dark mr-3 mb-1" (click)="addCity()" *ngIf="addmode" style="font-size: 12px;"  data-toggle="modal" data-target=".addCurrency"> <i class="fas fa-plus"></i> Add</button>
+        <button class="btn btn-sm btn-dark mr-3 mb-1" *ngIf="addmode" style="font-size: 10px;"  data-toggle="modal" data-target=".addReason"> <i class="fas fa-plus"></i> Add</button>
     </div>
 
-    <div class="mt-1 d-flex justify-content-end">
-        <button type="button" class="btn btn-dark btn-sm mr-1 mb-1" data-toggle="modal" data-target="#addCity" style="font-size: 10px;"><i class="fas fa-plus"></i> ADD</button>
-      </div>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-dark">Currency List</h6>
+            <h6 class="m-0 font-weight-bold text-dark">Reason List</h6>
         </div>
         <div class="card-body" *ngIf="!dataLoaded" style="align-items: center;">
             <div class="sk-chase">
@@ -35,7 +32,7 @@
                 <div class="sk-chase-dot"></div>
                 <div class="sk-chase-dot"></div>
             </div>
-            <p>Loading Currency List</p>
+            <p>Loading Reason List</p>
         </div>
         <div class="card-body" *ngIf="dataLoaded">
             <div class="table-responsive">
@@ -44,7 +41,7 @@
                         <tr>
                             <th style="position: sticky; left:0;"><input type="checkbox" (click)="getallselected($event)" style="height:15px; width:15px;"></th>
                             <th>S.No</th>
-                            <th>Currency Name</th>
+                            <th>Reason Name</th>
                             <th>Created At</th>
                             <th>Created By</th>
                             <th>Updated At</th>
@@ -56,7 +53,7 @@
                         <tr>
                             <th style="position: sticky; left:0;"><input type="checkbox" (click)="getallselected($event)" style="height:15px; width:15px;"></th>
                             <th>S.No</th>
-                            <th>Currency Name</th>
+                            <th>Reason Name</th>
                             <th>Created At</th>
                             <th>Created By</th>
                             <th>Updated At</th>
@@ -65,16 +62,16 @@
                         </tr>
                     </tfoot>
                     <tbody style="font-size: 14px;">
-                        <tr *ngFor="let item of CurrencyList; let i = index;">
+                        <tr *ngFor="let item of ReasonList; let i = index;">
                             <td style="position: sticky; left:0; background-color:rgb(109, 109, 109)"><input type="checkbox" (click)="getselected($event, i+1)" style="height:15px; width:15px;"></td>
                             <td>{{i+1}}</td>
-                            <td>{{item.currency_name}}</td>
+                            <td>{{item.reason_name}}</td>
                             <td>{{item.created_at | date}}</td>
                             <td>{{item.created_by}}</td>
                             <td>{{item.modified_at | date}}</td>
                             <td>{{item.modified_by}}</td>
                             <td>
-                                <button class="btn btn-sm btn-dark mr-1" style="font-size: 10px;" (click)="editCurrency(item)"> <i class="far fa-edit"></i> </button>
+                                <button class="btn btn-sm btn-dark mr-1" style="font-size: 10px;" (click)="editReason(item)"> <i class="far fa-edit"></i> </button>
                                 <button class="btn btn-sm btn-danger mr-1" style="font-size: 10px;" (click)="validate(item.id)"> <i class="fas fa-trash-alt"></i> </button>
                             </td>
                         </tr>
@@ -86,26 +83,26 @@
 </div>
 
 
-<div class="modal fade addCurrency" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade addReason" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">ADD NEW Currency</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">ADD NEW Reason Schedule</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
         </div>
         <div class="modal-body">
             <div class="container">
-                <form [formGroup]="addCurrencyForm">
+                <form [formGroup]="addReasonForm">
                     <div class="form-row">
                         <!-- <div class="form-group col-lg-3 col-md-4 col-sm-12">
                           <label for="">ID</label>
                           <input type="text" formControlName="id" class="form-control-sm" disabled>
                         </div> -->
                         <div class="form-group col-lg-3 col-md-4 col-sm-12">
-                          <label for="">Currency Name</label>
-                          <input type="text" formControlName="currency_name" class="form-control-sm">
+                          <label for="">Reason Name</label>
+                          <input type="text" formControlName="reason_name" class="form-control-sm">
                         </div>
                         <!-- <div class="form-group col-lg-3 col-md-4 col-sm-12">
                           <label for="">Created At</label>
@@ -128,8 +125,8 @@
             </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-dark btn-sm" (click)="addCurrency()" *ngIf="addmode">ADD</button>
-            <button type="button" class="btn btn-dark btn-sm" (click)="updateCurrency()" *ngIf="editmode">UPDATE</button>
+            <button type="button" class="btn btn-dark btn-sm" (click)="addReason()" *ngIf="addmode">ADD</button>
+            <button type="button" class="btn btn-dark btn-sm" (click)="updateReason()" *ngIf="editmode">UPDATE</button>
             <button type="button" class="btn btn-danger btn-sm" (click)="cancel()">Cancel</button>
         </div>
     </div>
@@ -147,11 +144,11 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>Do you really want to delete this Currency ?</p>
+          <p>Do you really want to delete this Reason ?</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger btn-sm" (click)="cancel()">No</button>
-          <button type="button" class="btn btn-success btn-sm" (click)="deleteCurrency()">Yes</button>
+          <button type="button" class="btn btn-success btn-sm" (click)="deleteReason()">Yes</button>
         </div>
       </div>
     </div>
