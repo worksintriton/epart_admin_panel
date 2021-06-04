@@ -12,20 +12,20 @@ import { NavigationComponent } from './user-pages/navigation/navigation.componen
 import { HomeComponent } from './user-pages/home/home.component';
 import { ForgotPasswordComponent } from './user-pages/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './user-pages/reset-password/reset-password.component';
-import { AddcityComponent } from './admin-modules/app-fetures/addcity/addcity.component';
-import { AddcountryComponent } from './admin-modules/app-fetures/addcountry/addcountry.component';
-import { AddcurrencyComponent } from './admin-modules/app-fetures/addcurrency/addcurrency.component';
-import { AddpayoutScheduleComponent } from './admin-modules/app-fetures/addpayout-schedule/addpayout-schedule.component';
-import { AddproductTypeComponent } from './admin-modules/app-fetures/addproduct-type/addproduct-type.component';
-import { AddreasonComponent } from './admin-modules/app-fetures/addreason/addreason.component';
-import { AddroleComponent } from './admin-modules/app-fetures/addrole/addrole.component';
-import { AddstateComponent } from './admin-modules/app-fetures/addstate/addstate.component';
 import { AddbuyerComponent } from './user-modules/addbuyer/addbuyer.component';
-import { AddsubscriptionPlanComponent } from './admin-modules/app-fetures/addsubscription-plan/addsubscription-plan.component';
-import { AddtradingTypeComponent } from './admin-modules/app-fetures/addtrading-type/addtrading-type.component';
-import { AdduserTypeComponent } from './admin-modules/app-fetures/adduser-type/adduser-type.component';
 import { ContactComponent } from './user-pages/contact/contact.component';
 import { PricingComponent } from './user-pages/pricing/pricing.component';
+import { AddcityComponent } from './admin-modules/app-features/addcity/addcity.component';
+import { AddcountryComponent } from './admin-modules/app-features/addcountry/addcountry.component';
+import { AddcurrencyComponent } from './admin-modules/app-features/addcurrency/addcurrency.component';
+import { AddpayoutScheduleComponent } from './admin-modules/app-features/addpayout-schedule/addpayout-schedule.component';
+import { AddproductTypeComponent } from './admin-modules/app-features/addproduct-type/addproduct-type.component';
+import { AddreasonComponent } from './admin-modules/app-features/addreason/addreason.component';
+import { AddroleComponent } from './admin-modules/app-features/addrole/addrole.component';
+import { AddstateComponent } from './admin-modules/app-features/addstate/addstate.component';
+import { AddsubscriptionPlanComponent } from './admin-modules/app-features/addsubscription-plan/addsubscription-plan.component';
+import { AddtradingTypeComponent } from './admin-modules/app-features/addtrading-type/addtrading-type.component';
+import { AdduserTypeComponent } from './admin-modules/app-features/adduser-type/adduser-type.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'navigation',pathMatch:'full'},
