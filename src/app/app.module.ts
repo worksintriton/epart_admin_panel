@@ -47,6 +47,13 @@ import { AddstateComponent } from './admin-modules/app-features/addstate/addstat
 import { AddsubscriptionPlanComponent } from './admin-modules/app-features/addsubscription-plan/addsubscription-plan.component';
 import { AddtradingTypeComponent } from './admin-modules/app-features/addtrading-type/addtrading-type.component';
 import { AdduserTypeComponent } from './admin-modules/app-features/adduser-type/adduser-type.component';
+import { CmsInfoComponent } from './admin-modules/cms/cms-info/cms-info.component';
+import { CmsBannerComponent } from './admin-modules/cms/cms-banner/cms-banner.component';
+import { CmsFeaturesComponent } from './admin-modules/cms/cms-features/cms-features.component';
+import { CmsHeroSectionComponent } from './admin-modules/cms/cms-hero-section/cms-hero-section.component';
+import { CmsServicesComponent } from './admin-modules/cms/cms-services/cms-services.component';
+import { CmsFooterComponent } from './admin-modules/cms/cms-footer/cms-footer.component';
+import { AddUsersComponent } from './admin-modules/app-users/add-users/add-users.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +89,13 @@ import { AdduserTypeComponent } from './admin-modules/app-features/adduser-type/
     AddsubscriptionPlanComponent,
     AddtradingTypeComponent,
     AdduserTypeComponent,
+    CmsInfoComponent,
+    CmsBannerComponent,
+    CmsFeaturesComponent,
+    CmsHeroSectionComponent,
+    CmsServicesComponent,
+    CmsFooterComponent,
+    AddUsersComponent,
   ],
   imports: [
     BrowserModule,

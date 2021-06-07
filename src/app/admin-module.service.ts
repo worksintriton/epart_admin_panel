@@ -188,7 +188,7 @@ searchProductTypeList(data){
 
 // Product Type MANAGEMENT API LIST ENDEDS HERE //
 
- // Product Type MANAGEMENT API LIST STARTS HERE //
+// Reason Type MANAGEMENT API LIST STARTS HERE //
 
  getReasonList(){
   return this.http.get(environment.baseurl+'reason-management/getlist')
@@ -215,7 +215,38 @@ searchReasonList(data){
 }
 
 
-// Product Type MANAGEMENT API LIST ENDEDS HERE //
+// Reason Type MANAGEMENT API LIST ENDEDS HERE //
+
+
+
+// InfoCms Type MANAGEMENT API LIST STARTS HERE //
+
+getInfoCmsList(){
+  return this.http.get(environment.baseurl+'cms-main/info_cms/getlist')
+}
+
+getInfoCmsInfo(id){
+  return this.http.get(environment.baseurl+'cms-main/info_cms/getby_id/'+id);
+}
+
+createInfoCms(data){
+  return this.http.post(environment.baseurl+'cms-main/info_cms/create',data);
+}
+
+updateInfoCms(data){
+  return this.http.put(environment.baseurl+'cms-main/info_cms/update/'+data.id,data)
+}
+
+deleteInfoCms(id){
+  return this.http.delete(environment.baseurl+'cms-main/info_cms/delete/'+id);
+}
+
+searchInfoCmsList(data){
+  return this.http.post(environment.baseurl+'cms-main/info_cms/search',data)
+}
+
+
+// InfoCms Type MANAGEMENT API LIST ENDEDS HERE //
 
 }
 

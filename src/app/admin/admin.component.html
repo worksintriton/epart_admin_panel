@@ -55,6 +55,21 @@
                     </div>
                 </div>
             </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCMS"
+                    aria-expanded="true" aria-controls="collapseCMS">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>CMS</span>
+                </a>
+                <div id="collapseCMS" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">CMS Configuration:</h6>
+                        <a class="collapse-item"[routerLink]="['/admin/cms-info']" routerLinkActive="router-link-active" >Info</a>
+                    </div>
+                </div>
+            </li>
     
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">

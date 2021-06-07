@@ -26,6 +26,7 @@ import { AddstateComponent } from './admin-modules/app-features/addstate/addstat
 import { AddsubscriptionPlanComponent } from './admin-modules/app-features/addsubscription-plan/addsubscription-plan.component';
 import { AddtradingTypeComponent } from './admin-modules/app-features/addtrading-type/addtrading-type.component';
 import { AdduserTypeComponent } from './admin-modules/app-features/adduser-type/adduser-type.component';
+import { CmsInfoComponent } from './admin-modules/cms/cms-info/cms-info.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'navigation',pathMatch:'full'},
@@ -56,7 +57,8 @@ const routes: Routes = [
     {path:'state-management', component:AddstateComponent},
     {path:'subscription-plan-management', component:AddsubscriptionPlanComponent},
     {path:'trading-type-management', component:AddtradingTypeComponent},
-    {path:'user-type-management', component:AdduserTypeComponent}
+    {path:'user-type-management', component:AdduserTypeComponent},
+    {path:'cms-info', component:CmsInfoComponent}
   ]}
 ];
 
