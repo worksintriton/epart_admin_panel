@@ -1,11 +1,25 @@
 
-    <h1 class="h3 mb-2 text-dark">Country Management</h1>
+<div class="container-fluid">
+  <!-- <div class="row d-flex justify-content-start">
+      <div class="col-12">
+          <h3>City Management</h3>
+      </div>
+  </div> -->
+  <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page" *ngIf="listmode">LIST</li>
+        <li class="breadcrumb-item active" aria-current="page" *ngIf="addmode">ADD</li>
+        <li class="breadcrumb-item active" aria-current="page" *ngIf="editmode">EDIT</li>
+        <li class="breadcrumb-item active" aria-current="page" *ngIf="deletemode">DELETE</li>
+      </ol>
+  </nav>
+</div>
 
     <div class="row d-flex justify-content-end">
         <button type="button" class="btn btn-dark btn-sm mr-1 mb-1" data-toggle="modal" data-target=".addCountry" style="font-size: 10px;"><i class="fas fa-plus"></i> ADD</button>
     </div>
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
+    <div class="card shadow mb-4 card_border_radius">
+        <div class="card-header py-3 card_header_table">
             <h6 class="m-0 font-weight-bold text-dark">Country List</h6>
         </div>
         <div class="card-body" *ngIf="!dataLoaded" style="align-items: center;">
@@ -22,7 +36,7 @@
         <div class="card-body" *ngIf="dataLoaded">
             <div class="table-responsive">
                 <table class="table table-bordered table-sm" datatable width="100%" cellspacing="0" [dtOptions]="dtOptions" >
-                    <thead style="font-size: 14px;" class="thead-dark">
+                    <thead style="font-size: 14px;" class="table_header">
                         <tr>
                             <th style="position: sticky; left:0;"><input type="checkbox" (click)="getallselected($event)" style="height:15px; width:15px;"></th>
                             <th>S.No</th>
@@ -34,7 +48,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tfoot style="font-size: 14px;" class="thead-dark">
+                    <tfoot style="font-size: 14px;" class="table_header">
                         <tr>
                           <th style="position: sticky; left:0;"><input type="checkbox" (click)="getallselected($event)" style="height:15px; width:15px;"></th>
                           <th>S.No</th>

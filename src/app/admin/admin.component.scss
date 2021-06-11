@@ -10354,7 +10354,7 @@ a:focus {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 0.65rem;
-  color: #b7b9cc;
+  color: #ffffff;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item,
@@ -10362,7 +10362,7 @@ a:focus {
   padding: 0.5rem 1rem;
   margin: 0 0.5rem;
   display: block;
-  color: #3a3b45;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 0.35rem;
   white-space: nowrap;
@@ -10370,17 +10370,19 @@ a:focus {
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
-  background-color: #eaecf4;
+  background-color: #ffffff;
+  color: #3381B4;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:active,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item:active {
-  background-color: #dddfeb;
+  background-color: #ffffff;
+  color: #3381B4;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item.active,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item.active {
-  color: #056CB1;
+  color: #ffffff;
   font-weight: 700;
 }
 
