@@ -2,15 +2,15 @@
 .nav.nav-tabs {
   background-color: black; }
   .nav.nav-tabs .nav-link {
-    color: #fff; }
+    color: #3381B4; }
     .nav.nav-tabs .nav-link.active {
-      border: 1px solid #fff;
+      border: 1px solid #1173b4;
       border-radius: 30px; }
   .nav.nav-tabs.bg-primary > .nav-item > .nav-link {
     background-color: transparent;
-    color: #fff; }
+    color: #3381B4; }
     .nav.nav-tabs.bg-primary > .nav-item > .nav-link.active {
-      border: 1px solid #fff;
+      border: 1px solid #1173b4;
       border-radius: 30px; }
   .nav.nav-tabs.bg-secondary > .nav-item > .nav-link {
     background-color: transparent;
@@ -44,9 +44,9 @@
       border-radius: 30px; }
   .nav.nav-tabs.bg-light > .nav-item > .nav-link {
     background-color: #fff;
-    color: #888; }
+    color: #3381B4; }
     .nav.nav-tabs.bg-light > .nav-item > .nav-link.active {
-      border: 1px solid #888;
+      border-bottom: 1px solid #1173b4;
       border-radius: 30px; }
   .nav.nav-tabs.bg-dark > .nav-item > .nav-link {
     background-color: transparent;
@@ -98,6 +98,7 @@
     padding-top: 20px;
     box-shadow: none !important; }
   .navbar .nav-item .nav-link {
+    color: #3381B4;
     font-size: 16px;
     transition: background-color 0.4s;
     border-radius: 3px;
@@ -105,8 +106,10 @@
     padding-bottom: 11px;
     line-height: 21px; }
     .navbar .nav-item .nav-link:hover {
+      color: #1173b4;
       background-color: rgba(255, 255, 255, 0.2); }
     .navbar .nav-item .nav-link.active {
+      border-bottom: 1px solid #1173b4;
       background-color: rgba(255, 255, 255, 0.2); }
   .navbar.transparent {
     box-shadow: none !important; }

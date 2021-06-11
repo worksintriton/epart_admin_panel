@@ -3,3 +3,23 @@
 @import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
 @import "~@ng-select/ng-select/themes/default.theme.css";
 @import '~owl.carousel/dist/assets/owl.carousel.css';
+
+
+.card_border_radius {
+    border-radius: 10px;
+}
+.card_header_table {
+    background-color: #E6F0F7;;
+}
+
+.table_header {
+    background-color: #E6F0F7;
+}
+
+.table_footer {
+    background-color: #E6F0F7;
+}
+
+.text_color_main {
+    color: #3381B4;
+}
