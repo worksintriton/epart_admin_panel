@@ -38,7 +38,7 @@
                     <span>App Configs</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="py-2 collapse-inner rounded">
+                    <div class="py-2 bg_nav_custom_1 collapse-inner rounded">
                         <h6 class="collapse-header">Configuration Data:</h6>
                         <a class="collapse-item"[routerLink]="['/admin/city-management']" routerLinkActive="router-link-active" >City</a>
                         <a class="collapse-item"[routerLink]="['/admin/currency-management']" routerLinkActive="router-link-active" >Curreny</a>
@@ -103,9 +103,14 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
+                    <div class="text-center d-none d-md-inline">
+                        <button class="text_color_main btn btn-link mr-3" style="font-size: 16px;" id="sidebarToggle"> <i class="fa fa-bars"></i> </button>
+                    </div>
                     <ul class="navbar-nav ml-auto">
-    
+                    
+                            
+                 
+                        
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
