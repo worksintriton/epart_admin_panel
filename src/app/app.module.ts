@@ -54,7 +54,14 @@ import { CmsHeroSectionComponent } from './admin-modules/cms/cms-hero-section/cm
 import { CmsServicesComponent } from './admin-modules/cms/cms-services/cms-services.component';
 import { CmsFooterComponent } from './admin-modules/cms/cms-footer/cms-footer.component';
 import { AddUsersComponent } from './admin-modules/app-users/add-users/add-users.component';
+import {MatIconModule} from '@angular/material/icon';
 
+import {MatInputModule} from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -112,7 +119,15 @@ import { AddUsersComponent } from './admin-modules/app-users/add-users/add-users
     FilterPipeModule,
     AutocompleteLibModule,
     CarouselModule,
-    DataTablesModule
+    DataTablesModule,
+    MatInputModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatBadgeModule,
+    MatInputModule,
+    MatTabsModule,
+    MatSelectModule,
+    MatIconModule
   ],
   providers: [
   ],

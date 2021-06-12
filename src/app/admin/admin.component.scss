@@ -10313,12 +10313,14 @@ a:focus {
 }
 
 .sidebar .nav-item .nav-link span {
-  font-size: 0.65rem;
+  font-size: 15px !important;
+  margin-left: 10px !important;
   display: block;
 }
 
 .sidebar .nav-item.active .nav-link {
-  font-weight: 700;
+  // font-weight: 700;
+  color: #056CB1;
 }
 
 .sidebar .nav-item .collapse {
@@ -10454,9 +10456,9 @@ a:focus {
 
 .sidebar .sidebar-heading {
   text-align: center;
-  padding: 0 1rem;
-  font-weight: 800;
-  font-size: 0.65rem;
+  padding: 10px 17px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .sidebar .sidebar-card {
@@ -10662,11 +10664,11 @@ a:focus {
 }
 
 .sidebar-dark hr.sidebar-divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 3px solid rgba(255, 255, 255, 0.15);
 }
 
 .sidebar-dark .sidebar-heading {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.493);
 }
 
 .sidebar-dark .nav-item .nav-link {
@@ -10674,7 +10676,8 @@ a:focus {
 }
 
 .sidebar-dark .nav-item .nav-link i {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgb(255 255 255);
+    font-size: 18px;
 }
 
 .sidebar-dark .nav-item .nav-link:active, .sidebar-dark .nav-item .nav-link:focus, .sidebar-dark .nav-item .nav-link:hover {
@@ -10690,11 +10693,12 @@ a:focus {
 }
 
 .sidebar-dark .nav-item.active .nav-link {
-  color: #fff;
+  color:  #056cb1;
+  background-color: #fff;
 }
 
 .sidebar-dark .nav-item.active .nav-link i {
-  color: #fff;
+  color: #056cb1;
 }
 
 .sidebar-dark #sidebarToggle {
@@ -11258,4 +11262,47 @@ footer.sticky-footer .copyright {
 
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
+}
+
+.buy{
+  text-align: center;
+    color: #fff;
+    font-size: 20px;
+    padding: 13px 10px;
+    font-weight: 600;
+}
+.toggled .nav-item .nav-link span{
+  display: none !important;
+}
+
+:host::ng-deep .mat-form-field-flex {
+  border: 1px solid #cecece !important;
+  border-radius: 5px 0px 0px 5px!important;
+  padding: 0px 5px 0px 5px;
+  width: 100%;
+}
+:host::ng-deep  .mat-form-field-underline {
+  display: none;
+}
+:host::ng-deep  .mat-form-field-infix {
+  border-top: 0px solid transparent;
+}
+.mat-form-field {
+  width: 100%;
+}
+:host::ng-deep .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-bottom: 0px !important;
+}
+.fa-info-circle{
+  font-size: 17px;
+  color: #bebebe;
+}
+.sb{
+  position: absolute;
+    height: 39px;
+    min-width: 49px !important;
+
+}
+:host::ng-deep .mat-raised-button.mat-primary {
+  background-color: #056cb1 !important;
 }
