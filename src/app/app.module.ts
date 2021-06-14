@@ -62,6 +62,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatSliderModule} from '@angular/material/slider';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -127,7 +130,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule,
     MatTabsModule,
     MatSelectModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule,
+    MatSliderModule
   ],
   providers: [
   ],

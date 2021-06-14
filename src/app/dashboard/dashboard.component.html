@@ -1,44 +1,571 @@
 <div class="container-fluid">
-    <div class="row d-flex justify-content-start">
-        <div class="col-12">
-            <h3 class="b-h">Orders:</h3>
-        </div>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
+    <div fxFlex="100%">
+      <h3 class="b-h">Orders:</h3>
     </div>
-    <!-- <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item active" aria-current="page">Analytics</li>
-        </ol>
-    </nav> -->
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-    <div class="col-md-3">
+  </div>
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
+    <div fxFlex="25%">
       <div class="card-counter">
         <h4 class="count-name">Total Buyers</h4>
         <h3 class="count-numbers">12</h3>
       </div>
     </div>
-
-    <div class="col-md-3">
+    <div fxFlex="25%">
       <div class="card-counter">
         <h4 class="count-name">Sellers</h4>
         <h3 class="count-numbers">599</h3>
       </div>
     </div>
-
-    <div class="col-md-3">
+    <div fxFlex="25%">
       <div class="card-counter">
         <h4 class="count-name">Intermediator</h4>
         <h3 class="count-numbers">6875</h3>
       </div>
     </div>
-
-    <div class="col-md-3">
+    <div fxFlex="25%">
       <div class="card-counter">
         <h4 class="count-name">Orders</h4>
         <h3 class="count-numbers">35</h3>
       </div>
     </div>
+  </div>
+  <br />
+</div>
+
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
+  <div fxFlex="50%">
+    <div fxLayout="column" fxLayout.xs="" fxLayoutWrap fxLayoutAlign="center">
+      <div fxFlex="100%">
+        <h3 class="b-h">Team Details:</h3>
+
+
+        <div class="card-counter-1">
+          <div class="h-1">
+
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
+              <div fxFlex="70%">
+                <h4 class="count-name">Team Members: 12</h4>
+              </div>
+              <div fxFlex="30%">
+                <select style="width: 75px; float: right;">
+                  <option value="undraw_profile_1">Sort by</option>
+                  <option value="option2">Option 2 (disabled)</option>
+                  <option value="option3">Option 3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="l-1">
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center" class="box-01">
+              <div fxFlex="60px">
+                <img class="pro-i" src="assets/Logo_mini.png" alt="Logo">
+
+              </div>
+              <div fxFlex>
+                <h5 class="u-t">User Name</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </div>
+            </div>
+            <hr />
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center" class="box-01">
+              <div fxFlex="60px">
+                <img class="pro-i" src="assets/Logo_mini.png" alt="Logo">
+
+              </div>
+              <div fxFlex>
+                <h5 class="u-t">User Name</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </div>
+            </div>
+            <hr />
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center" class="box-01">
+              <div fxFlex="60px">
+                <img class="pro-i" src="assets/Logo_mini.png" alt="Logo">
+
+              </div>
+              <div fxFlex>
+                <h5 class="u-t">User Name</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </div>
+            </div>
+            <hr />
+
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center" class="box-01">
+              <div fxFlex="60px">
+                <img class="pro-i" src="assets/Logo_mini.png" alt="Logo">
+
+              </div>
+              <div fxFlex>
+                <h5 class="u-t">User Name</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </div>
+            </div>
+            <hr />
+
+          </div>
+
+        </div>
+        <br />
+      </div>
+      <div fxFlex="100%">
+        <h3 class="b-h">Active Subscriptions:</h3>
+
+
+        <div class="card-counter-3">
+          <div class="l-1">
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center" class="box-01">
+              <div fxFlex="100px">
+                <img class="pro-2" src="assets/sub.png" alt="Logo">
+
+              </div>
+              <div fxFlex>
+                <h5 class="u-t">Gold package</h5>
+                <p style="margin-bottom: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <mat-slider class="example-margin" [disabled]="disabled" [invert]="invert" [max]="max" [min]="min"
+                  [step]="step" [thumbLabel]="thumbLabel" [vertical]="vertical" aria-labelledby="example-name-label">
+                </mat-slider>
+                <button mat-raised-button color="primary" class="sb" style="float: right;">Upgrade</button>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="50%">
+    <div class="card-counter-4">
+      <div class="h-1">
+
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
+          <div fxFlex="70%">
+            <h4 class="count-name">Manage Vehicles: 12</h4>
+          </div>
+          <div fxFlex="30%">
+            <select style="width: 75px; float: right;">
+              <option value="undraw_profile_1">Sort by</option>
+              <option value="option2">Option 2 (disabled)</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center strech" style="padding: 10px;">
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+        <div fxFlex="25%">
+          <div class="box-02">
+            <p class="h-2">Audi</p>
+            <div style="padding: 2px 10px;">
+              <table style="width: 100%;">
+                <tr>
+                  <td class="t-lb">Brand:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td class="t-lb">Model:</td>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
   </div>
 </div>
