@@ -64,6 +64,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSliderModule} from '@angular/material/slider';
+import { ChartsModule } from 'ng2-charts';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -132,7 +134,9 @@ import {MatSliderModule} from '@angular/material/slider';
     MatSelectModule,
     MatIconModule,
     FlexLayoutModule,
-    MatSliderModule
+    MatSliderModule,
+    ChartsModule,
+    MatProgressBarModule
   ],
   providers: [
   ],
