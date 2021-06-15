@@ -10480,7 +10480,7 @@ a:focus {
 
 @media (min-width: 768px) {
   .sidebar {
-    width: 14rem !important;
+    width: 22rem !important;
   }
   .sidebar .nav-item .collapse {
     position: relative;
@@ -10507,7 +10507,7 @@ a:focus {
     width: 100%;
     text-align: left;
     padding: 1rem;
-    width: 14rem;
+    width: 22rem;
   }
   .sidebar .nav-item .nav-link i {
     font-size: 0.85rem;
@@ -11298,4 +11298,7 @@ body.sidebar-toggled footer.sticky-footer {
 .sidebar .nav-item .nav-link span {
   font-size: 14px !important;
   font-weight: 600;
+}
+a{
+  cursor: pointer;
 }

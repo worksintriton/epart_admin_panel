@@ -4,7 +4,7 @@
   padding: 20px 20px;
   background-color: #fff;
   height: 100px;
-  border-radius: 13px;
+  border-radius: 10px;
   transition: 0.3s linear all;
   color: #222222;
 }
@@ -14,7 +14,7 @@
   // padding: 20px 20px;
   background-color: #fff;
   height: 350px;
-  border-radius: 13px;
+  border-radius: 10px;
   transition: 0.3s linear all;
   color: #222222;
   // overflow-y: scroll;
@@ -25,7 +25,7 @@
   padding: 20px 20px;
   background-color: #fff;
   height: 150px;
-  border-radius: 13px;
+  border-radius: 10px;
   transition: 0.3s linear all;
   color: #222222;
 }
@@ -35,11 +35,23 @@
   // padding: 20px 20px;
   background-color: #fff;
   // height: 350px;
-  border-radius: 13px;
+  border-radius: 10px;
   transition: 0.3s linear all;
   color: #222222;
   // overflow-y: scroll;
   margin-top: 33px;
+}
+.card-counter-5 {
+  box-shadow: 2px 2px 10px #dadada;
+  margin: 5px;
+  // padding: 20px 20px;
+  background-color: #fff;
+  // height: 350px;
+  border-radius: 10px;
+  transition: 0.3s linear all;
+  color: #222222;
+  // overflow-y: scroll;
+  overflow: hidden;
 }
 .box-02 {
   box-shadow: 2px 2px 10px #dadada;
@@ -47,7 +59,7 @@
   // padding: 20px 20px;
   background-color: #eeeeee;
   height: 150px;
-  border-radius: 13px;
+  border-radius: 10px;
   transition: 0.3s linear all;
   color: #222222;
   overflow: hidden;
@@ -66,6 +78,12 @@
   color: #363636;
   font-weight: 500;
   font-size: 19px;
+  margin-bottom: 0px;
+}
+.b-h1 {
+  color: #363636;
+  font-weight: 500;
+  font-size: 16px;
   margin-bottom: 0px;
 }
 .count-name {
@@ -121,14 +139,35 @@ hr {
   width: 80px;
   height: 80px;
 }
-.h-2{
+.h-2 {
   padding: 10px;
-    background-color: #363636;
-    font-size: 14px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 0px;
-}
-td{
+  background-color: #363636;
   font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0px;
+}
+td {
+  font-size: 14px;
+}
+.card-counter-5 th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+  padding: 5px 10px;
+  background-color: #056cb1;
+  color: #fff;
+}
+.card-counter-5  td {
+  font-size: 14px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #eee;
+  color: rgb(141, 141, 141);
+
+}
+.view{
+  color: #056cb1;
+    font-size: 14px;
+    text-decoration: underline;
+    text-align: right;
+    margin-right: 10px;
 }
