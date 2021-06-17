@@ -66,6 +66,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSliderModule} from '@angular/material/slider';
 import { ChartsModule } from 'ng2-charts';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {A11yModule} from '@angular/cdk/a11y';
 
 @NgModule({
   declarations: [
@@ -136,7 +137,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     FlexLayoutModule,
     MatSliderModule,
     ChartsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    A11yModule
   ],
   providers: [
   ],

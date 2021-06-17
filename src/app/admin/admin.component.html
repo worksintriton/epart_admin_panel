@@ -2,6 +2,107 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <img src="../../assets/logo.png" style="height: 60px; width:auto;" alt="">
+                </div>
+            </a>
+
+            <li class="nav-item buy"> <span>BUYER</span>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li><hr class="sidebar-divider my-0">
+
+            <li class="nav-item" [routerLink]="['/admin/dashboard']" routerLinkActive="active">
+                <a class="nav-link">
+                    <i class="fas fa-fw fa-th"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-file-invoice"></i>
+                    <span>Manage orders</span>
+                </a>
+
+            </li>
+
+
+
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-list-alt"></i>
+                    <span>Manage Save as Quotes</span>
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-user-friends"></i>
+                    <span>My subscriptions</span>
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Manage payment</span>
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-car"></i>
+                    <span>Manage Vehicles</span>
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Manage team</span>
+                </a>
+
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-bell"></i>
+                    <span>Notifications</span>
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-headset"></i>
+                    <span>Help & Support</span>
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Manage profile</span>
+                </a>
+
+            </li>
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+
+
+
 
         <!-- ====admin=== -->
         <!-- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -104,8 +205,8 @@
         </ul> -->
 
 
-<!-- ==== superadmin=== -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- ==== superadmin=== -->
+        <!-- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <a class="sidebar-brand d-flex align-items-center justify-content-center">
                 <div class="sidebar-brand-icon rotate-n-15">
@@ -130,7 +231,7 @@
                     <span>Configuration data</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <!-- <div class="py-2 bg_nav_custom_1 collapse-inner rounded">
+                    <div class="py-2 bg_nav_custom_1 collapse-inner rounded">
                         <h6 class="collapse-header">Configuration Data:</h6>
                         <a class="collapse-item" [routerLink]="['/admin/city-management']"
                             routerLinkActive="router-link-active">City</a>
@@ -154,7 +255,7 @@
                             routerLinkActive="router-link-active">Trading Type</a>
                         <a class="collapse-item" [routerLink]="['/admin/user-type-management']"
                             routerLinkActive="router-link-active">User Type</a>
-                    </div> -->
+                    </div>
                 </div>
             </li>
 
@@ -292,10 +393,10 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-        </ul>
+        </ul> -->
 
 
-   <!-- ==== seller admin=== -->     
+        <!-- ==== seller admin=== -->
         <!-- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <a class="sidebar-brand d-flex align-items-center justify-content-center">
@@ -304,7 +405,7 @@
                 </div>
             </a>
 
-            <li class="nav-item buy"> <span>SELLER ADMIN</span>
+            <li class="nav-item buy"> <span>SELLER</span>
 
             </li>
             <hr class="sidebar-divider my-0">
